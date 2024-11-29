@@ -4,6 +4,7 @@ start_time_otxa = time.time()
 import asyncio
 import ipaddress
 import json
+from common import Style, ips, timeout_set
 
 import aiohttp
 

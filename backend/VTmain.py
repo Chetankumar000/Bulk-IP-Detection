@@ -11,6 +11,16 @@ from aiohttp import ClientSession
 from common import Style, truststore, ips, timeout_set
 from credentials import vt_api
 
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access environment variables
+vt_api = os.getenv("VT_API")
+
+
 truststore.inject_into_ssl()
 
 all_vt_ips = []

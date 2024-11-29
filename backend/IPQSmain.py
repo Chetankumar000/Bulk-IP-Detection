@@ -4,6 +4,14 @@ start_time_ipqs = time.time()
 import asyncio
 import ipaddress
 import json
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access environment variables
+ipqs_api = os.getenv("IPQS_API")
 
 import aiohttp
 

@@ -7,6 +7,21 @@ import json
 import ipaddress
 from credentials import aipdb_api
 from common import Style, ips, timeout_set
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+
+aipdb_api = os.getenv("AIPDB_API")
+
 
 all_aipdb_ips = []
 

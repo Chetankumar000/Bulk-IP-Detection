@@ -26,7 +26,12 @@ truststore.inject_into_ssl()  # Inject truststore into the standard library ssl 
 
 all_ips = []  # to have the sorted-final list
 
-with open("ips.txt") as f:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the path to the ip_list.txt file
+file_path = os.path.join(script_dir, "ip_list.txt")
+
+with open(file_path, "r") as f:
     ips = f.readlines()
 ips = [x.strip() for x in ips]  # remove new line char
 ips = list(set(ips))  # remove duplicates
