@@ -60,6 +60,10 @@ async def process_ip_or_domain(address, index, session):
     }
     return result
 
+@app.route('/', methods=['GET'])
+async def all():
+    return jsonify("hi")
+
 @app.route('/analyze', methods=['POST'])
 async def analyze():
     data = request.json
@@ -71,6 +75,9 @@ async def analyze():
         results = await asyncio.gather(*tasks)
 
     return jsonify(results)
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

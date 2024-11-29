@@ -180,7 +180,7 @@
         document.getElementById("loading").style.display = 'block';
 
         try {
-          const response = await fetch("http://127.0.0.1:5000/analyze", {
+          const response = await fetch("https://e470cbc4-6e33-4df5-9d29-d606fd224f0f-dev.e1-us-east-azure.choreoapis.dev/cyber-api/cyber-api/v1.0/analyze", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ inputs }),
